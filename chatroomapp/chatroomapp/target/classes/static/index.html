@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Chat Room</title>
+
+    <!-- We have added bootstrap, now link it here -->
+    <!-- This line connects your HTML page to the Bootstrap framework -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- This line links to the jQuery library, which makes it easier to manipulate HTML elements, handle events, and create animations on your webpage. -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+
+    <!-- These two lines include libraries called sockjs and stomp, which are used for real-time communication (like in chat rooms). They help the webpage connect to a server and exchange messages instantly. -->
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/script.js"></script>
+
+</head>
+<body class="custom-color-background">
+
+<!-- Welcome and Instructions -->
+<!-- d-flex align-items-center input field ko center mai kar dega. -->
+<div id="name-from" class="bg-primary d-flex flex-column align-items-center justify-content-center">
+    
+    <div class="container-fluid bg-primary text-white py-3">
+        <!-- Adjusted margin-bottom for more space below the text -->
+        <h1 class="text-center mb-6">ChatConnect</h1>
+    </div>
+	
+   <h1 class="mt-5">Welcome to ChatConnect: Where Conversations Come Alive!</h1>
+    <p>Step into the Chat Zone: Connect, Share, Enjoy!</p>
+    <p>A friendly space for open discussions and new connections.</p>
+    <p>Chat about anything and everything in this all-purpose room.</p>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="input-group">
+                    <input type="text"
+                           placeholder="Enter your name"
+                           id="name-value"
+                           autofocus
+                           class="form-control"
+                    >
+                    <!-- yeah bootstrap class button ko input kai right mai lai jayegi. -->
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" id="login">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chat Room -->
+<div id="chat-room" class="d-none" >
+    <!-- d-none kai karan jo eske andar likhe gai, vo hide ho jayega. -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h3 id="name-title"></h3>
+                        
+                        <p>Got something to say? Type away!</p>
+                        
+                        <p><b> Rules: </b> </p>
+                        <p>Keep it friendly, keep it fun!</p>
+                        <p>Respect others, embrace diversity, enjoy the chat!</p>
+                        <p>Be kind, be curious, be yourself!</p>
+                        
+                        <p><b>Today's Hot Topics:</b></p> 
+                        <p> What's your favorite book and why?</p>
+                        <p>If you could time travel, where would you go?</p>
+                        
+                    </div>
+                    <!-- eske andar card ka text place karenge. -->
+                    <div class="card-body" >
+                        <div class="input-group">
+                            <input type="text"
+                                   placeholder="Enter your message"
+                                   id="message-value"
+                                   autofocus
+                                   class="form-control"
+                            >
+                            <!-- yeah bootstrap class button ko input kai right mai lai jayegi. -->
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" id="send-btn">Send</button>
+                                <button class="btn btn-dark" id="logout">Logout</button>
+                            </div>
+                        </div>
+                        <!--  This class makes the table scrollable if the content overflows the available space.  -->
+                        <div class="table-responsive mt-3" >
+                            <table id="message-container-table"></table>
+                        </div>
+                        <!-- <div id="typing-indicator"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

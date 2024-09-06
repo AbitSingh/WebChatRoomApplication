@@ -1,0 +1,119 @@
+/* Overall styling for the body */
+body {
+   
+    font-family: 'Open Sans', sans-serif; /* Apply Google Font */
+}
+
+.custom-color-background{
+	background-color:  #248cff;
+}
+
+/* Welcome section styling */
+#name-from {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align text */
+    font-family: 'Roboto', sans-serif; /* Apply Google Font */
+    padding: 20px;
+}
+
+#name-from h1 {
+    color: #ffffff; /* White color for visibility */
+    font-size: 2.5rem; /* Larger font size */
+    margin-bottom: 20px; /* Add some space below */
+    font-weight: bold; /* Make text bold */
+}
+
+#name-from p {
+    color: #f0f0f0; /* Light gray color */
+    font-size: 1.2rem; /* Slightly larger font size */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Add some space below */
+    max-width: 600px; /* Limit the width of text */
+}
+
+/* Input and button styling on username page */
+#name-value {
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#login {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding */
+}
+
+#login:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Chat room container styling */
+#chat-room {
+    font-family: 'Roboto', sans-serif; /* Apply Google Font */
+}
+
+/* Message table styling */
+#message-container-table {
+    width: 100%; /* Full width of the container */
+}
+
+/* Message content styling */
+#message-container-table td {
+    padding: 7px; /* Add padding inside the cells */
+    color: #000000; /* White text for messages */
+   /*  border-bottom: 1px solid #343a40; /* Dark border for separation */ */
+}
+
+/* Message sender name styling */
+#message-container-table td b {
+    color: #00bfae; /* Distinct color for user names */
+}
+
+/* Timestamp styling */
+.timestamp {
+    color: #888888;
+    font-size: 0.8rem;
+    float: right;
+    margin-left: 5px; /* Space between message content and timestamp */
+    display: block; /* Ensure timestamp appears on a new line */
+    margin-top: 5px; /* Add vertical space above timestamp */
+}
+
+/* Typing indicator styling */
+#typing-indicator {
+    color: #f0f0f0; /* Light gray color */
+    font-size: 1rem; /* Font size */
+    font-style: italic; /* Italic text */
+    margin-top: 10px; /* Space above */
+    text-align: center; /* Center align the indicator */
+}
+
+#send-btn {
+    background-color: #339cff;
+}
+
+#send-btn:hover {
+    background-color: #007bff; /* Primary blue on hover */
+}
+
+#logout {
+    background-color: #339cff;
+}
+
+#logout:hover {
+    background-color: #007bff; /* Primary blue on hover */
+}
+
+
+
+/* Utility class to hide elements */
+.d-none {
+    display: none;
+}
